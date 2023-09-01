@@ -19,6 +19,9 @@ export default function MainNavbar() {
                 </ul>
                 <ul className={styles.right}>
                     <li className={styles.element}>
+                        <a href="https://discord.gg/vlrpt">Discord</a>
+                    </li>
+                    <li className={styles.element}>
                         <a href="/login">Login</a>
                     </li>
                     <li className={styles.element}>
