@@ -1,7 +1,6 @@
 import styles from "./page.module.css";
 export default function About() {
     return <main className={styles.main}>
-
         <div className={styles.container}>
             <h1 className={styles.info}>Info</h1>
             <p className={styles.textInfo}>
