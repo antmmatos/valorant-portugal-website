@@ -1,7 +1,9 @@
+
 .container {
     height: fit-content;
     width: 90vw;
     margin: 0 auto;
+    padding: 0 150px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,12 +19,34 @@
     color: white;
 }
 
+.TitleRegulamento {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-size: 2rem;
+    text-decoration: underline;
+    font-family: var(--valorantFont);
+}
+
 .regulamento {
     margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
     font-weight: bold;
-    text-decoration: underline ;
     color: white;
-    font-family: var(--valorantFont);
+}
+
+.regulamentoOl {
+    counter-reset: item
+}
+
+.regulamentoLi {
+    display: block
+}
+
+.regulamentoLi:before {
+    content: counters(item, ".") ". ";
+    counter-increment: item
 }
