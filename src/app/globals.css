@@ -1,7 +1,14 @@
+@font-face {
+    font-family: 'Valorant';  /* Give your font a name for reference */
+    src: url('/ValorantFont.ttf') format('truetype'); /* Update the path and format accordingly */
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    --backgroundColor: #391eb08a;
+    --valorantFont: 'Valorant', sans-serif;
 }
 
 html,

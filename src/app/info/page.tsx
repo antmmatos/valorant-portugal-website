@@ -1,12 +1,10 @@
 import styles from "./page.module.css";
-import Image from "next/image";
-
 export default function About() {
     return <main className={styles.main}>
 
         <div className={styles.container}>
-            <Image src="/info.png" alt="info" width={651} height={151} />
-            <p className={styles.textAbout}>
+            <h1 className={styles.info}>Info</h1>
+            <p className={styles.textInfo}>
                 O Valorant Portugal Torneios é um novo projeto em Portugal!
                 <br />
                 <br />

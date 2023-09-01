@@ -9,17 +9,17 @@ export default function MainNavbar() {
                     <a href="/">Home</a>
                 </li>
                 <li className={styles.element}>
-                    <a href="/about">About</a>
+                    <a href="/info">Info</a>
                 </li>
                 <li className={styles.element}>
-                    <a href="/staff">Staff</a>
+                    <a href="/regulamento">Regulamento</a>
                 </li>
                 <ul className={styles.center}>
                     <Image src="/logo.png" alt="logo" width={150} height={150} />
                 </ul>
                 <ul className={styles.right}>
                     <li className={styles.element}>
-                        <a href="https://discord.gg/vlrpt">Discord</a>
+                        <a href="/staff">Administração</a>
                     </li>
                     <li className={styles.element}>
                         <a href="/login">Login</a>
