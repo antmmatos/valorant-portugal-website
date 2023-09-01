@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap%22");
 @font-face {
     font-family: 'Valorant';  /* Give your font a name for reference */
     src: url('/ValorantFont.ttf') format('truetype'); /* Update the path and format accordingly */
@@ -9,6 +10,7 @@
     margin: 0;
     --backgroundColor: #391eb08a;
     --valorantFont: 'Valorant';
+    font-family: "Quicksand", sans-serif;
 }
 
 html,
