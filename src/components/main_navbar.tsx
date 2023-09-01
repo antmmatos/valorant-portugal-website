@@ -12,17 +12,17 @@ export default function MainNavbar() {
             <ul className={styles.container}>
                 <li className={styles.element}>
                     <a href="/" id="home">
-                        Início
+                        Home
                     </a>
                 </li>
                 <li className={styles.element}>
                     <a href="/info" id="info">
-                        Informações
+                        Informations
                     </a>
                 </li>
                 <li className={styles.element}>
                     <a href="/regulamento" id="regulamento">
-                        Regulamento
+                        Rules
                     </a>
                 </li>
                 <ul className={styles.center}>
@@ -36,17 +36,17 @@ export default function MainNavbar() {
                 <ul className={styles.right}>
                     <li className={styles.element}>
                         <a href="/staff" id="staff">
-                            Administração
+                            Staff
                         </a>
                     </li>
                     <li className={styles.element}>
                         <a href="/login" id="login">
-                            Entrar
+                            Login
                         </a>
                     </li>
                     <li className={styles.element}>
                         <a href="/register" id="register">
-                            Registar
+                            Register
                         </a>
                     </li>
                 </ul>
