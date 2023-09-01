@@ -26,3 +26,12 @@
     color: white;
     font-family: var(--valorantFont);
 }
+
+.imagesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
