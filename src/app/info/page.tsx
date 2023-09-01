@@ -1,4 +1,6 @@
 import styles from "./page.module.css";
+import Image from "next/image";
+
 export default function About() {
     return <main className={styles.main}>
 
@@ -19,6 +21,20 @@ export default function About() {
                 Os 4 primeiros lugares da primeira liga, jogam no fim do campeonato as finais para decidir assim o campeão de cada liga.
                 <br />
             </p>
+        </div>
+        <div className={styles.imagesContainer}>
+            <a href="https://www.twitch.tv/vlrportugaltorneios">
+                <Image src="/logo_valtorneios_twitch_png.png" alt="logo" width={250} height={250} />
+            </a>
+            <a href="https://discord.gg/vlrpt">
+                <Image src="/discord_logo.png" alt="logo" width={250} height={250} />
+            </a>
+            <a href="https://twitter.com/ValorantPTC">
+                <Image src="/twitter_logo.png" alt="logo" width={250} height={250} />
+            </a>
+            <a href="https://www.tiktok.com/@valorant_portugal">
+            <Image src="/tiktok_logo.png" alt="logo" width={476} height={250} />
+            </a>
         </div>
     </main>;
 }
