@@ -1,12 +1,15 @@
-"use client";
+"use client"
+
 import Image from "next/image";
 import styles from "./main_navbar.module.css";
+import { useEffect } from "react";
 
 export default function MainNavbar() {
     const activePage = window.location.pathname.split("/")[1] || "home";
-    
-    const element = document.getElementById(activePage);
-    element?.classList.add(styles.active);
+    useEffect(() => {
+        const element = document.getElementById(activePage);
+        element?.classList.add(styles.active);
+    }, [activePage]);
     return (
         <nav className={styles.nav}>
             <ul className={styles.container}>
