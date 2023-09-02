@@ -16,7 +16,7 @@ export default function Regulamento() {
                             <li
                                 className={`${styles.regulamento} ${styles.regulamentoLi}`}
                             >
-                                Para cada jogo um responsável irá convidar os
+                                Para cada jogo, o responsável de cada equipa irá convidar os
                                 respetivos líderes de equipas que irão jogar.
                                 Posteriormente os líderes deverão convidar os
                                 seus jogadores.
@@ -38,8 +38,8 @@ export default function Regulamento() {
                                 Todos os jogadores terão que estar presentes no
                                 lobby dentro do horário estipulado para o jogo
                                 (30 minutos de tolerância de atraso). Se os
-                                jogadores não estiverem presentes depois do
-                                limite, a equipa com todos os membros pode tirar
+                                jogadores não estiverem presentes depois da
+                                tolerância, a equipa com todos os membros pode tirar
                                 uma captura de ecrã ao Lobby e reportar o
                                 resultado (Vitória por falta de comparência).
                             </li>
@@ -79,15 +79,15 @@ export default function Regulamento() {
                             <li
                                 className={`${styles.regulamento} ${styles.regulamentoLi}`}
                             >
-                                O substituto não pode pertencer a mais nenhuma
-                                equipa que esteja a participar ou tenha sido
+                                O suplente não pode pertencer a mais nenhuma
+                                equipa que esteja a participar ou que tenha sido
                                 eliminada no mesmo Torneio.
                             </li>
                             <li
                                 className={`${styles.regulamento} ${styles.regulamentoLi}`}
                             >
                                 Qualquer jogador do roster que não esteja a
-                                participar no jogo, pode preencher a vaga do
+                                participar no jogo, pode preencher a vaga de
                                 treinador da equipa no lobby.
                             </li>
                             <li
@@ -109,7 +109,7 @@ export default function Regulamento() {
                                 className={`${styles.regulamento} ${styles.regulamentoLi}`}
                             >
                                 Qualquer modificação de terceiros que crie uma
-                                injusta vantagem vai resultar na remoção
+                                injusta vantagem vai resultar na desqualificação
                                 imediata da equipa. Isto não sendo permitido:
                             </li>
                             Multihacks
@@ -130,7 +130,7 @@ export default function Regulamento() {
                                 qualquer circunstancia do Torneio. Se um
                                 utilizador for apanhado a usar qualquer tipo de
                                 cheats irá resultar em Ban e desqualificação da
-                                equipa. Os seguintes cheats incluídos são:
+                                equipa. Os cheats incluídos são:
                             </li>
                             ESP
                             <br />
@@ -195,7 +195,7 @@ export default function Regulamento() {
                                 meio de uma ronda a ronda deverá continuar como
                                 normal. Quando a ronda acabar e a nova ronda
                                 começar o host pausa o lobby na fase de compra
-                                permitindo ao jogador/es se reconectem, voltando
+                                permitindo ao jogador/es se reconectarem, voltando
                                 ao lobby, a equipa com problemas de conexão
                                 devem informar à outra equipa que estão prontos
                                 para continuar.
@@ -215,7 +215,7 @@ export default function Regulamento() {
                             <li
                                 className={`${styles.regulamento} ${styles.regulamentoLi}`}
                             >
-                                As equipas podem o Timeout in-game de 2x um
+                                As equipas podem pedir o Timeout in-game de 2x um
                                 minuto de pausa. Só podem usar uma por cada
                                 lado. Isto é permitido para todas as fases do
                                 Torneio. (Não devem usar a pausa do timer ingame
@@ -240,10 +240,10 @@ export default function Regulamento() {
                             <li
                                 className={`${styles.regulamento} ${styles.regulamentoLi}`}
                             >
-                                Os jogadores podem fazer live stream dos seus
+                                Os jogadores podem fazer Live Stream dos seus
                                 POVs durante os qualificadores abertos, desde
                                 que cumprem os requisitos. Jogadores a fazer
-                                Streaming tem de ter a live stream muda durante
+                                Streaming tem de ter a Live Stream sem som durante
                                 conversas no Discord com a Staff, incluindo
                                 encontros com os líderes antes do torneio
                                 começar. Treinadores, equipa staff e criadores
@@ -269,7 +269,7 @@ export default function Regulamento() {
                                 className={`${styles.regulamento} ${styles.regulamentoLi}`}
                             >
                                 Os jogadores que transmitirem o evento serão
-                                obrigados a usar um atraso mínimo de 240
+                                obrigados a usar um Delay mínimo de 240
                                 segundos para manter a integridade competitiva.
                                 Qualquer pessoa que transmita o torneio deve
                                 desativar a configuração "mostrar sangue" e
@@ -282,7 +282,7 @@ export default function Regulamento() {
                                 Os jogadores que transmitirem o evento também
                                 devem incluir o logotipo do Torneio em sua
                                 sobreposição e utilizar o título do evento no
-                                título da transmissão. Infelizmente, as equipes
+                                título da transmissão. Infelizmente, as equipas
                                 incapazes de atender a essa solicitação não
                                 poderão transmitir.
                             </li>
@@ -445,14 +445,14 @@ export default function Regulamento() {
                             <li
                                 className={`${styles.regulamento} ${styles.regulamentoLi}`}
                             >
-                                Espera-se que os jogadores tratem outros
+                                Os jogadores devem tratar outros
                                 Competidores, Staff e Equipa de produção com
                                 respeito em qualquer altura.
                             </li>
                             <li
                                 className={`${styles.regulamento} ${styles.regulamentoLi}`}
                             >
-                                Nomes de equipes, nomes de jogadores, crosshairs
+                                Nomes de equipas, nomes de jogadores, crosshairs
                                 e logotipos não devem ser ofensivos, tóxicos,
                                 inapropriado ou prejudiciais.
                             </li>
