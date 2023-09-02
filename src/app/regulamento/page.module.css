@@ -8,6 +8,7 @@
     flex-direction: column;
     align-items: center;
     background-color: var(--backgroundColor);
+    backdrop-filter: blur(10px);
     font-size: large;
     border-radius: 8px;
 }

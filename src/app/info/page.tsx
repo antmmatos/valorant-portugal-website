@@ -33,7 +33,7 @@ export default function About() {
                 <Image src="/twitter_logo.png" alt="logo" width={250} height={250} />
             </a>
             <a href="https://www.tiktok.com/@valorant_portugal">
-            <Image src="/tiktok_logo.png" alt="logo" width={476} height={250} />
+            <Image src="/tiktok_logo.png" alt="logo" width={250} height={250} />
             </a>
         </div>
     </main>;

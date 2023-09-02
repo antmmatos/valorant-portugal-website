@@ -1,0 +1,79 @@
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem;
+    border-radius: 8px;
+    background-color: #391eb08a;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #000;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    font-family: var(--valorantFont);
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.label[for="email"],
+.label[for="password"] {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 0 0 10px #000;
+    font-family: var(--valorantFont);
+
+}
+
+.label[for="password"] {
+    margin-top: 2rem;
+}
+
+.input[name="password"] {
+    margin-bottom: 2.5rem;
+}
+
+.input[name="email"],
+.input[name="password"] {
+    width: 25rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    outline: none;
+}
+
+.button[type="submit"] {
+    width: 17.5rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: var(--valorantFont);
+    color: #fff;
+    background-color: #000;
+    outline: none;
+    cursor: pointer;
+}
