@@ -1,8 +1,7 @@
 import queryData from "@/app/lib/db";
 import NextAuth from "next-auth";
-import type { AuthOptions } from "next-auth";
+import type { AuthOptions, Session } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { encode, decode } from "next-auth/jwt";
 import crypto from "crypto";
 
 export const authOptions: AuthOptions = {
@@ -16,11 +15,11 @@ export const authOptions: AuthOptions = {
         signOut: "/",
     },
     callbacks: {
-        async session({ session, token }) {
+        async session({ session, token }: { session: Session; token: any }) {
             (session as any).user = token.user;
             return session;
         },
-        async jwt({ token, user, account, profile }) {
+        async jwt({ token, user }) {
             if (user) {
                 token.user = user;
             }
@@ -37,7 +36,7 @@ export const authOptions: AuthOptions = {
             async authorize(credentials, req) {
                 if (typeof credentials !== "undefined") {
                     const res = await queryData(
-                        "SELECT ID, Username, Email, Role, isDiscordConnected FROM users WHERE Username = ? AND Password = ?",
+                        "SELECT ID, Username, Email, Role, DiscordId FROM users WHERE Username = ? AND Password = ?",
                         [
                             credentials.username,
                             crypto
@@ -53,7 +52,7 @@ export const authOptions: AuthOptions = {
                             name: res[0].Username,
                             email: res[0].Email,
                             role: res[0].Role,
-                            isDiscordConnected: res[0].isDiscordConnected,
+                            discordId: res[0].DiscordId,
                         };
                     } else {
                         return null;
