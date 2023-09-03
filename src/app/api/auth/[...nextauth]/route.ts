@@ -37,7 +37,7 @@ export const authOptions: AuthOptions = {
             async authorize(credentials, req) {
                 if (typeof credentials !== "undefined") {
                     const res = await queryData(
-                        "SELECT ID, Username, Email, Role FROM users WHERE Username = ? AND Password = ?",
+                        "SELECT ID, Username, Email, Role, isDiscordConnected FROM users WHERE Username = ? AND Password = ?",
                         [
                             credentials.username,
                             crypto
@@ -53,6 +53,7 @@ export const authOptions: AuthOptions = {
                             name: res[0].Username,
                             email: res[0].Email,
                             role: res[0].Role,
+                            isDiscordConnected: res[0].isDiscordConnected,
                         };
                     } else {
                         return null;
