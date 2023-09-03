@@ -1,4 +1,4 @@
-import mysql from "mysql2/promise";
+import mysql, { RowDataPacket } from "mysql2/promise";
 
 const db = mysql.createPool({
     host: "localhost",
@@ -14,17 +14,14 @@ const db = mysql.createPool({
     },
 });
 
-export default async function query({
-    query,
-    values,
-}: {
-    query: string;
-    values?: any;
-}) {
+export default async function queryData(
+    sql: string,
+    parameters: Array<string | number | string[]>
+) {
     try {
-        const [results] = await db.query(query, values || []);
-        return results;
-    } catch (error) {
-        return { error };
+        const [rows] = (await db.query(sql, parameters)) as RowDataPacket[];
+        return rows;
+    } catch (error: any) {
+        throw new Error(error.message);
     }
 }

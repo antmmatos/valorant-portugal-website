@@ -31,7 +31,7 @@
     justify-content: center;
 }
 
-.label[for="email"],
+.label[for="username"],
 .label[for="password"] {
     margin-bottom: 1rem;
     font-size: 2rem;
@@ -50,7 +50,7 @@
     margin-bottom: 2.5rem;
 }
 
-.input[name="email"],
+.input[name="username"],
 .input[name="password"] {
     width: 25rem;
     height: 3rem;
@@ -76,4 +76,14 @@
     background-color: #000;
     outline: none;
     cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.button + span {
+    color: white;
+}
+
+.button + span > a {
+    color: #ff4655;
+    text-decoration: none;
 }
