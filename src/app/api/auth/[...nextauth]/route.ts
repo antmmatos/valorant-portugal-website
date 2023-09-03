@@ -8,7 +8,7 @@ import crypto from "crypto";
 export const authOptions: AuthOptions = {
     useSecureCookies: process.env.NODE_ENV === "production",
     debug: process.env.NODE_ENV !== "production",
-    secret: "ea0CL65Fj8byOo2Qb3Z3DHDeLbgY0AQE40LtF9BQnR1A4OuKDb",
+    secret: process.env.JWT_SECRET,
     pages: {
         signIn: "/login",
         error: "/",
