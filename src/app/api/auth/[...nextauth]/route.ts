@@ -47,12 +47,16 @@ export const authOptions: AuthOptions = {
                         ]
                     );
                     if (res.length > 0) {
+                        const discordData = JSON.parse(res[0].DiscordData);
                         return {
                             id: res[0].ID,
                             name: res[0].Username,
                             email: res[0].Email,
                             role: res[0].Role,
-                            discordId: res[0].DiscordId,
+                            discord: {
+                                id: discordData.id,
+                                username: discordData.username,
+                            },
                         };
                     } else {
                         return null;

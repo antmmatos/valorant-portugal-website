@@ -5,12 +5,17 @@ export enum Role {
 }
 
 declare module "next-auth" {
+    interface DiscordData {
+        id?: string;
+        username?: string;
+    }
+
     interface User {
         id: number;
         name: string;
         email: string;
         role: Role;
-        discordId?: string;
+        discord: DiscordData;
     }
 
     interface Session extends DefaultSession {
