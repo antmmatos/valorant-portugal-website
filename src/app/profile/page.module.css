@@ -1,61 +1,97 @@
-.usernameContainer {
+.main {
+    margin: 2rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin: 1rem 25vw;
-    padding: 0.7rem 0;
-    overflow-y: hidden;
-    background-color: var(--backgroundColor);
-    border-radius: 10rem;
 }
 
-.usernameTitle {
-    color: white;
-    padding: 0.5rem 0;
-    list-style-type: none;
-    font-size: xx-large;
-    font-weight: bolder;
-    transition: color 0.2s ease-in-out;
-    text-align: center;
-    width: 8rem;
-    font-family: var(--valorantFont);
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    width: 50vw;
+    box-shadow: 0 0 5px #000;
 }
 
-.leftContainer {
+.avatarContainer {
     display: flex;
     flex-direction: column;
-    justify-content: left;
     align-items: center;
-    width: 25%;
-    padding: 0 150px;
-    border-radius: 30%;
-    background-color: var(--backgroundColor);
+    justify-content: center;
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 222px;
+    width: 222px;
 }
 
-.button[type="submit"] {
-    width: 17.5rem;
-    height: 3rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1.25rem;
-    font-weight: 500;
-    font-family: var(--valorantFont);
-    color: #fff;
-    background-color: #000;
-    outline: none;
-    cursor: pointer;
-    margin-bottom: 10px;
+.avatarContainer svg {
+    font-size: 100px;
+    position: absolute;
+    color: white;
 }
-/*.avatarContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  height: 50%;
-  background-color: var(--backgroundColor);
-  border-radius: 50%;
-}*/
+
+.avatarContainer:hover .uploadImage {
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.uploadImage {
+    position: absolute;
+    background-color: #333333d2;
+    height: 222px;
+    width: 222px;
+    border-radius: 50%;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.uploadImage svg {
+    font-size: 100px;
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.informationContainer {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2rem;
+    margin: 2rem 2rem;
+}
+
+.infoDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.infoDetails:not(:first-child) {
+    margin-left: 5rem;
+}
+
+.infoDetails > input {
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 8px;
+    outline: none;
+    
+}
+
+.infoDetails > input:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.infoDetails > h5 {
+    color: white;
+    margin-bottom: 5px;
+}

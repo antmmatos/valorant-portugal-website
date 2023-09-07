@@ -23,7 +23,7 @@ export const authOptions: AuthOptions = {
             if (user) {
                 token.user = user;
             }
-            return { ...token, ...user };
+            return { ...token };
         },
     },
     providers: [
@@ -36,7 +36,7 @@ export const authOptions: AuthOptions = {
             async authorize(credentials, req) {
                 if (typeof credentials !== "undefined") {
                     const res = await queryData(
-                        "SELECT ID, Username, Email, Role, DiscordId FROM users WHERE Username = ? AND Password = ?",
+                        "SELECT ID, Username, Email, Role, DiscordData FROM users WHERE Username = ? AND Password = ?",
                         [
                             credentials.username,
                             crypto
@@ -56,6 +56,7 @@ export const authOptions: AuthOptions = {
                             discord: {
                                 id: discordData.id,
                                 username: discordData.username,
+                                avatar: discordData.avatar,
                             },
                         };
                     } else {

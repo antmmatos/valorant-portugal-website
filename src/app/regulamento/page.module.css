@@ -1,4 +1,3 @@
-
 .container {
     height: fit-content;
     width: 90vw;
@@ -11,6 +10,30 @@
     backdrop-filter: blur(10px);
     font-size: large;
     border-radius: 8px;
+    padding-bottom: 50px;
+}
+
+.rulesContainer {
+    overflow-y: scroll;
+    height: 60vh;
+}
+
+.rulesContainer::-webkit-scrollbar {
+    width: 8px;
+}
+
+.rulesContainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+.rulesContainer::-webkit-scrollbar-thumb {
+    background: var(--backgroundColor);
+    border-radius: 5px;
+}
+
+.rulesContainer::-webkit-scrollbar-thumb:hover {
+    background: #1f37d1cd;
 }
 
 .textRegulamento {
@@ -40,14 +63,14 @@
 }
 
 .regulamentoOl {
-    counter-reset: item
+    counter-reset: item;
 }
 
 .regulamentoLi {
-    display: block
+    display: block;
 }
 
 .regulamentoLi:before {
     content: counters(item, ".") ". ";
-    counter-increment: item
+    counter-increment: item;
 }

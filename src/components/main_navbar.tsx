@@ -2,22 +2,17 @@
 import Image from "next/image";
 import styles from "./main_navbar.module.css";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import { useSession } from "next-auth/react";
 
 export default function MainNavbar() {
-    const { data: session, status } = useSession();
+    const { status } = useSession();
+    const pathname = usePathname();
     useEffect(() => {
-        const activePage = window.location.pathname.split("/")[1] || "home";
+        const activePage = pathname.split("/")[1] || "home";
         const element = document.getElementById(activePage);
         element?.classList.add(styles.active);
-    }, []);
-    if (status === "authenticated") {
-        const loginLabel = document.getElementById("login");
-        if (loginLabel) {
-            loginLabel.textContent = "Profile" || "Login";
-            loginLabel.setAttribute("href", "/profile");
-        }
-    }
+    }, [status]);
     return (
         <nav className={styles.nav}>
             <ul className={styles.container}>
@@ -36,6 +31,16 @@ export default function MainNavbar() {
                         Rules
                     </a>
                 </li>
+                <li className={styles.element}>
+                    <a href="/torneios" id="torneios">
+                        Tournaments
+                    </a>
+                </li>
+                <li className={styles.element}>
+                    <a href="/staff" id="staff">
+                        Staff
+                    </a>
+                </li>
                 <ul className={styles.center}>
                     <Image
                         priority={true}
@@ -46,21 +51,47 @@ export default function MainNavbar() {
                     />
                 </ul>
                 <ul className={styles.right}>
-                    <li className={styles.element}>
-                        <a href="/torneios" id="torneios">
-                            Tournaments
-                        </a>
-                    </li>
-                    <li className={styles.element}>
-                        <a href="/staff" id="staff">
-                            Staff
-                        </a>
-                    </li>
-                    <li className={styles.element}>
-                        <a href="/login" id="login">
-                            Login
-                        </a>
-                    </li>
+                    {(status === "unauthenticated" && (
+                        <>
+                            <li className={styles.element}>
+                                <a href="/login" id="login">
+                                    Login
+                                </a>
+                            </li>
+                            <li className={styles.element}>
+                                <a
+                                    className={styles.registerBtn}
+                                    href="/register"
+                                    id="register"
+                                >
+                                    Register
+                                </a>
+                            </li>
+                        </>
+                    )) ||
+                        (status === "authenticated" && (
+                            <>
+                                <li className={styles.element}>
+                                    <a href="/accounts" id="accounts">
+                                        Team
+                                    </a>
+                                </li>
+                                <li className={styles.element}>
+                                    <a href="/accounts" id="accounts">
+                                        Accounts
+                                    </a>
+                                </li>
+                                <li className={styles.element}>
+                                    <a
+                                        className={styles.registerBtn}
+                                        href="/profile"
+                                        id="profile"
+                                    >
+                                        Profile
+                                    </a>
+                                </li>
+                            </>
+                        ))}
                 </ul>
             </ul>
         </nav>

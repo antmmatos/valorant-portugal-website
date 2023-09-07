@@ -19,7 +19,6 @@ export default function Login() {
             password: event.currentTarget.password.value,
             redirect: false,
         });
-        console.log(res);
         if (res?.error) {
             return toast.error("Username e password não correspondem");
         }
