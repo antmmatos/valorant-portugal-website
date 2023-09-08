@@ -72,12 +72,12 @@ export default function MainNavbar() {
                         (status === "authenticated" && (
                             <>
                                 <li className={styles.element}>
-                                    <a href="/accounts" id="accounts">
+                                    <a href="/profile/team" id="team">
                                         Team
                                     </a>
                                 </li>
                                 <li className={styles.element}>
-                                    <a href="/accounts" id="accounts">
+                                    <a href="/profile/accounts" id="accounts">
                                         Accounts
                                     </a>
                                 </li>

@@ -1,97 +1,74 @@
-.main {
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+/* Profile.module.css */
+
+.profile {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.container {
+.profileHeader {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    border-radius: 8px;
-    backdrop-filter: blur(10px);
-    width: 50vw;
-    box-shadow: 0 0 5px #000;
+    margin-bottom: 20px;
 }
 
-.avatarContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid white;
+.profileImage {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    height: 222px;
-    width: 222px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.avatarContainer svg {
-    font-size: 100px;
-    position: absolute;
-    color: white;
+.headerText {
+    margin-left: 20px;
 }
 
-.avatarContainer:hover .uploadImage {
-    cursor: pointer;
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.3s, visibility 0.3s;
+.name {
+    font-size: 36px;
+    margin: 0;
 }
 
-.uploadImage {
-    position: absolute;
-    background-color: #333333d2;
-    height: 222px;
-    width: 222px;
-    border-radius: 50%;
-    z-index: 1;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
+.jobTitle {
+    font-size: 18px;
+    color: #777;
 }
 
-.uploadImage svg {
-    font-size: 100px;
-    position: absolute;
-    color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.informationContainer {
+.profileContent {
     display: flex;
-    flex-direction: row;
-    margin-left: 2rem;
-    margin: 2rem 2rem;
+    justify-content: space-between;
 }
 
-.infoDetails {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.aboutMe,
+.contactInfo {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 0 10px;
 }
 
-.infoDetails:not(:first-child) {
-    margin-left: 5rem;
+.main h2 {
+    font-size: 24px;
+    margin-top: 0;
 }
 
-.infoDetails > input {
-    padding: 0.5rem;
-    border: 0;
-    border-radius: 8px;
-    outline: none;
-    
+.main p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
 }
 
-.infoDetails > input:not(:last-child) {
-    margin-bottom: 2rem;
+.main ul {
+    list-style: none;
+    padding: 0;
 }
 
-.infoDetails > h5 {
-    color: white;
-    margin-bottom: 5px;
+.main li {
+    font-size: 16px;
+    margin-bottom: 8px;
 }
