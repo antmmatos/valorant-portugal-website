@@ -1,57 +1,15 @@
 .container {
     height: fit-content;
-    width: 90vw;
+    width: 40vw;
     margin: 0 auto;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: var(--backgroundColor);
-    backdrop-filter: blur(10px);
     font-size: large;
     border-radius: 8px;
-}
-
-.discordContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    background-image: url("/bar.png");
-    background-repeat: no-repeat;
-    background-size: 30% 120%;
-    background-position: 590px;
-    font-family: var(--valorantFont);
-    font-size: small;
-}
-
-.text {
-    margin-top: 2rem;
-    margin-left: 10px;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: white;
-    font-family: var(--valorantFont);
-    font-size: x-large;
-    text-decoration: underline ;
-}
-
-.riotContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    margin-right: 100px;
-    background-image: url("/bar.png");
-    background-repeat: no-repeat;
-    background-size: 30% 120%;
-    background-position: 590px;
-    font-family: var(--valorantFont);
-    font-size: small;
 }
 
 .connectText {
@@ -59,5 +17,58 @@
     margin-bottom: 2rem;
     text-align: center;
     color: white;
+    font-family: var(--valorantFont);
+}
+
+.andText {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: white;
+    font-family: var(--valorantFont);
+}
+
+.accountContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.accountContainer:last-child {
+    margin-bottom: 2rem;
+}
+
+.discordContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.riotContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    margin-left: 2rem;
+}
+
+.accountContainer > div > * {
+    margin: 0 0.5rem;
+    color: white;
+    text-decoration: underline;
+    font-size: xx-large;
     font-family: var(--valorantFont);
 }

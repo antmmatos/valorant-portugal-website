@@ -26,56 +26,61 @@ export default function discordVerified() {
         }).then(async (res) => {
             const data = await res.json();
             if (res.status === 200) {
-                const res = await fetch("/api/accounts", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({
-                        account: "discord",
-                        id: data.id,
-                        username: data.username,
-                        avatar: data.avatar,
-                    }),
-                });
-                const storeInfoRes = await res.json();
-                if (res.status !== 200) {
-                    toast.error(storeInfoRes.message);
-                    return router.push("/");
-                }
-                await update({
-                    user: {
-                        ...data,
-                        discord: {
+                try {
+                    await fetch("/api/profile/accounts", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                        body: JSON.stringify({
+                            account: "discord",
                             id: data.id,
                             username: data.username,
                             avatar: data.avatar,
+                        }),
+                    });
+                    await update({
+                        user: {
+                            ...data,
+                            discord: {
+                                id: data.id,
+                                username: data.username,
+                                avatar: data.avatar,
+                            },
                         },
-                    },
-                });
-                setReturnData(
-                    <div className={styles.container}>
-                        <Image
-                            src={"/right.png"}
-                            alt="Verified Image"
-                            width={250}
-                            height={250}
-                        />
-                        <h1>Discord verificado</h1>
-                        <p>
-                            Conta de Discord verificada com sucesso. Será
-                            redirecionado em alguns segundos. Caso não seja
-                            redirecionado, clique{" "}
-                            <a href="/profile/accounts">aqui</a>.
-                        </p>
-                    </div>
-                );
-                setTimeout(() => {
-                    return router.push("/profile");
-                }, 2000);
+                    });
+                    setReturnData(
+                        <div className={styles.container}>
+                            <Image
+                                src={"/right.png"}
+                                alt="Verified Image"
+                                width={250}
+                                height={250}
+                            />
+                            <h1>Discord verificado</h1>
+                            <p>
+                                Conta de Discord verificada com sucesso. Será
+                                redirecionado em alguns segundos. Caso não seja
+                                redirecionado, clique{" "}
+                                <a href="/profile/accounts">aqui</a>.
+                            </p>
+                        </div>
+                    );
+                    setTimeout(() => {
+                        toast.success("Conta de Discord verificada com sucesso.");
+                        return router.push("/profile/accounts");
+                    }, 2000);
+                } catch (err) {
+                    toast.error("Ocorreu um erro ao conectar a conta de Discord.");
+                    return router.push("/profile/accounts");
+                }
             } else {
-                return router.push("/profile");
+                toast.error("Ocorreu um erro ao conectar a conta de Discord.");
+                return router.push("/profile/accounts");
             }
+        }).catch((err) => {
+            toast.error("Ocorreu um erro ao conectar a conta de Discord.");
+            return router.push("/profile/accounts");
         });
     }, []);
     return returnData;

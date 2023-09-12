@@ -1,11 +1,16 @@
 import { withAuth } from "next-auth/middleware";
 
-export default withAuth({
-    callbacks: {
-        authorized({ req, token }) {
-            return !!token;
-        },
+export default withAuth(
+    function middleware(req) {
+        
     },
-});
+    {
+        callbacks: {
+            authorized: ({ token }) => {
+                return !!token;
+            },
+        },
+    }
+);
 
-export const config = { matcher: ["/api", "/profile"] };
+export const config = { matcher: ["/profile/:path*"] };

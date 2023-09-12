@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
                     username,
                     avatar,
                 }),
-                token?.id as number,
+                (token?.user as User)?.id as number,
             ]
         );
         if (res.affectedRows > 0) {
