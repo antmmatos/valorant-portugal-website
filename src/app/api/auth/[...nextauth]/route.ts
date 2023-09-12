@@ -50,14 +50,17 @@ export const authOptions: AuthOptions = {
                         const discordData = JSON.parse(res[0].DiscordData);
                         return {
                             id: res[0].ID,
-                            name: res[0].Username,
-                            email: res[0].Email,
+                            username: res[0].Username,
+                            mail: res[0].Email,
                             role: res[0].Role,
                             discord: {
-                                id: discordData.id,
-                                username: discordData.username,
-                                avatar: discordData.avatar,
+                                id: discordData.id || null,
+                                username: discordData.username || null,
+                                avatar: discordData.avatar || null,
                             },
+                            riot: {
+                                
+                            }
                         };
                     } else {
                         return null;

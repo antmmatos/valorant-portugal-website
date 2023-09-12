@@ -10,12 +10,17 @@ declare module "next-auth" {
         username?: string;
     }
 
+    interface RiotData {
+        // TODO
+    }
+
     interface User {
         id: number;
-        name: string;
-        email: string;
+        username: string;
+        mail: string;
         role: Role;
         discord: DiscordData;
+        riot: RiotData;
     }
 
     interface Session extends DefaultSession {
