@@ -14,28 +14,44 @@
 
 .discordContainer {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    background-image: url("/discord_logo.png");
+    margin: 0 auto;
+    background-image: url("/bar.png");
     background-repeat: no-repeat;
-    background-size: 5% 70%;
-    background-position: 600px;
+    background-size: 30% 120%;
+    background-position: 590px;
+    font-family: var(--valorantFont);
+    font-size: small;
+}
 
+.text {
+    margin-top: 2rem;
+    margin-left: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: white;
+    font-family: var(--valorantFont);
+    font-size: x-large;
+    text-decoration: underline ;
 }
 
 .riotContainer {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
     width: 100%;
-    background-image: url("/riot_logo.png");
+    margin: 0 auto;
+    margin-right: 100px;
+    background-image: url("/bar.png");
     background-repeat: no-repeat;
-    background-size: 3% 50%;
-    background-position: 615px;
-
+    background-size: 30% 120%;
+    background-position: 590px;
+    font-family: var(--valorantFont);
+    font-size: small;
 }
 
 .connectText {

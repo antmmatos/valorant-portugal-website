@@ -6,10 +6,12 @@ export default function ProfileAccountsPage() {
         <div className={styles.container}>
             <h1 className={styles.connectText}>Conecta as tuas contas</h1>
                 <div className={styles.discordContainer}>
-                    <Image src="/bar.png" alt="bar" width={512} height={110} />
+                    <Image src="/discord_logo.png" alt="bar" width={100} height={100} />
+                    <h1 className={styles.text}>Conectar discord</h1>
                 </div>
                 <div className={styles.riotContainer}>
-                    <Image src="/bar.png" alt="bar" width={512} height={110} />
+                    <Image src="/riot_logo.png" alt="bar" width={50} height={50} />
+                    <h1 className={styles.text}>Conectar Riot</h1>
                 </div>
         </div>
 
