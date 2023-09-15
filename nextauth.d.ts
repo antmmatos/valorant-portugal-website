@@ -11,7 +11,8 @@ declare module "next-auth" {
     }
 
     interface RiotData {
-        // TODO
+        username?: string;
+        userTag?: string;
     }
 
     interface User {

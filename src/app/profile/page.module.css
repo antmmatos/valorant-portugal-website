@@ -72,3 +72,18 @@
     font-size: 16px;
     margin-bottom: 8px;
 }
+
+.signOutButton {
+    width: 17.5rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    font-family: var(--valorantFont);
+    color: #fff;
+    background-color: #000;
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}

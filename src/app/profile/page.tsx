@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faUpload } from "@fortawesome/free-solid-svg-icons/faUpload";
 import { useState } from "react";
+import { signOut } from "next-auth/react"
 
 export default function Profile() {
     const [isEditing, setIsEditing] = useState(false);
@@ -60,6 +61,11 @@ export default function Profile() {
                         </ul>
                     </div>
                 </div>
+                <button className={styles.signOutButton} onClick={
+                    () => {
+                        signOut({ callbackUrl: '/'})
+                    }
+                }>Sign out</button>
             </div>
         </main>
     );
