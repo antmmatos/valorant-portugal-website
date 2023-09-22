@@ -22,6 +22,7 @@ declare module "next-auth" {
         role: Role;
         discord: DiscordData;
         riot: RiotData;
+        verified: boolean;
     }
 
     interface Session extends DefaultSession {

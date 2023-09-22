@@ -1,27 +1,37 @@
-.container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2.5rem;
-    border-radius: 8px;
+    height: 100vh;
+}
+
+.border {
+    border-image: linear-gradient(#ff000088, #73ff0088) 30;
+    border-width: 10px;
+    border-style: solid;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
     background-color: #391eb08a;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px #000;
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     font-family: var(--valorantFont);
     color: #fff;
-    text-shadow: 0 0 10px #000;
+    text-shadow: 0 0 5px #000;
     text-align: center;
+    letter-spacing: 0.1rem;
 }
 
 .form {
@@ -29,6 +39,21 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.rowInputs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.labelInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 1rem;
 }
 
 .label {
@@ -39,9 +64,10 @@
     font-family: var(--valorantFont);
 }
 
-.input {
-    width: 25rem;
-    height: 3rem;
+.input,
+.select {
+    width: 15rem;
+    height: 2.5rem;
     border: none;
     border-radius: 0.5rem;
     padding: 0 1rem;
@@ -54,7 +80,7 @@
 }
 
 .button[type="submit"] {
-    width: 17.5rem;
+    width: 14rem;
     height: 3rem;
     border: none;
     border-radius: 0.5rem;

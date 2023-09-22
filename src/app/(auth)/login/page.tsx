@@ -2,13 +2,10 @@
 import { signIn } from "next-auth/react";
 import styles from "./page.module.css";
 import { toast } from "react-toastify";
-import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
-    const { data: session } = useSession();
-    if (session) {
-        window.location.href = "/";
-    }
+    const router = useRouter();
     const handleSubmitLogin = async (
         event: React.FormEvent<HTMLFormElement>
     ) => {
@@ -17,12 +14,12 @@ export default function Login() {
             username: event.currentTarget.username.value,
             password: event.currentTarget.password.value,
             redirect: false,
+            callbackUrl: "/profile",
         });
         if (res?.error) {
             return toast.error("Username e password não correspondem");
         }
-        toast.success("Login efetuado com sucesso");
-        //window.location.href = "/";
+        router.push("/profile");
     };
 
     return (

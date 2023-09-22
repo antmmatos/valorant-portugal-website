@@ -36,7 +36,7 @@ export const authOptions: AuthOptions = {
             async authorize(credentials, req) {
                 if (typeof credentials !== "undefined") {
                     const res = await queryData(
-                        "SELECT ID, Username, Email, Role, DiscordData FROM users WHERE Username = ? AND Password = ?",
+                        "SELECT ID, Username, Email, Role, DiscordData, RiotData, Verified FROM users WHERE Username = ? AND Password = ?",
                         [
                             credentials.username,
                             crypto
@@ -60,7 +60,8 @@ export const authOptions: AuthOptions = {
                             },
                             riot: {
                                 
-                            }
+                            },
+                            verified: res[0].Verified,
                         };
                     } else {
                         return null;
